@@ -22,7 +22,7 @@ public class DosingCalculatorTest {
     public void returnsCorrectDosesForNeonate() {
         patient.setBirthDate(LocalDate.now().minusMonths(1));
         String singleDose = dosingCalculator.getRecommendedSingleDose(patient, "Tylenol Oral Suspension");
-        assertEquals("0", singleDose);
+        assertEquals("2.5 ml", singleDose);
     }
 
     @Test
